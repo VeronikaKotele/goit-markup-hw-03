@@ -58,16 +58,23 @@ a {
     justify-content: space-between;
 }
 
-header .container {
+.header .container {
     flex-direction: row;
     padding-top: 24px;
     padding-bottom: 24px;
     width: 1158px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-section .container {
+.footer .container {
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.features-section, .team-section, .portfolio-section {
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -77,16 +84,14 @@ section .container {
     padding-bottom: 188px;
 }
 
-footer .container {
-    align-items: flex-start;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
 nav, address {
     display: flex;
+    align-items: center; 
     flex-direction: row;
-    gap: 76px;
+}
+
+.brand {
+    margin-right: 76px;
 }
 
 nav ul, address ul {
@@ -108,19 +113,51 @@ ul, ol {
     gap: 24px;
 }
 
+.portfolio-section .card-set {
+    flex-wrap: wrap;
+    row-gap: 48px;
+}
+
 .card {
     background-color: #FFFFFF;
+    border: none;
+}
+
+section:not(.features-section) .card {
     border: 1px solid #E7E9FC;
 }
 
+.features-section .card {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+.team-section .card {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.portfolio-section .card {
+    flex-basis: calc((100% - 2*24px) / 3);
+}
+
+/*
+.portfolio-section .card-content 
+padding: 16px 32px;
+border: 1px solid #e7e9fc;
+*/
 .card-content {
-    margin: 16px 32px;
+    padding: 16px 32px;
+    border: 1px solid #E7E9FC;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+.team-section .card-content {
+    align-items: center;
+}
+
 .card-title, h3 {
+    text-align: center;
     color: #2E2F42;
     font-weight: 500;
     font-size: 20px;
@@ -159,11 +196,21 @@ header {
     text-align: center;
     line-height: 24px;
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .page-nav .link:hover,
 .page-nav .link:focus {
     color: #404BBF;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
 }
 
 .address {
@@ -189,18 +236,6 @@ header {
 
 .team-section {
     background-color: #F4F4FD;
-}
-
-.team-section .card-content {
-    align-items: center;
-}
-
-.portfolio-section .card-set {
-    flex-wrap: wrap;
-}
-
-.portfolio-section .card {
-    flex-basis: calc((100% - 2*24px) / 3);
 }
 
 h1 {
@@ -234,7 +269,7 @@ button {
     cursor: pointer;
     margin-top: 48px;
     border-radius: 4px;
-    padding: 16px 32px;
+    padding: 32px 16px;
     min-width: 169px;
     height: 56px;
     border: none;
@@ -249,10 +284,29 @@ button:focus {
     background-color: #2E2F42;
 }
 
-.footer p, a {
+.footer .brand {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer .footer-text {
+    display: inline-block;
     color: #F4F4FD;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
+}
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0, 0, 0, 0);
+   overflow: hidden;
 }
