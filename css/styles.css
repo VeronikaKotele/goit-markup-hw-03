@@ -11,6 +11,7 @@
   --grey: #2E2F42B2;
   --white: #FFFFFF;
   --dairy: #FCFCFC;
+  --button-color: #4d5ae5;
 }
 
 body {
@@ -21,6 +22,10 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, ol, ul, li {
     margin: 0;
+}
+
+h1 {
+    margin-bottom: 48px;
 }
 
 h2 {
@@ -59,10 +64,8 @@ a {
 }
 
 .header .container {
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
     flex-direction: row;
-    padding-top: 24px;
-    padding-bottom: 24px;
     width: 1158px;
     margin: 0 auto;
 }
@@ -85,10 +88,6 @@ nav, address {
     display: flex;
     align-items: center; 
     flex-direction: row;
-}
-
-.brand {
-    margin-right: 76px;
 }
 
 nav ul, address ul {
@@ -165,6 +164,7 @@ section:not(.features-section) .card {
 }
 
 .card-text {
+    text-align: center;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -181,6 +181,8 @@ section:not(.features-section) .card {
     letter-spacing: 0.03em;
     vertical-align: middle;
     text-transform: uppercase;
+    margin-right: 76px;
+    display: inline-block;
 }
 
 .header {
@@ -195,8 +197,6 @@ section:not(.features-section) .card {
     text-align: center;
     line-height: 24px;
     letter-spacing: 0.02em;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .page-nav .link:hover,
@@ -210,6 +210,8 @@ section:not(.features-section) .card {
     justify-content: space-between;
     align-items: stretch;
     gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .address {
@@ -258,20 +260,18 @@ h2 {
 }
 
 .button {
+    display: block;
+    min-width: 169px;
     height: 56px;
-    font-family: 'Roboto', sans-serif;
+    border: none;
     color: #FFFFFF;
-    background-color: #4D5AE5;
+    background-color: var(--button-color);
+    border-radius: 4px;
+    cursor: pointer;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.04em;
-    cursor: pointer;
-    margin-top: 48px;
-    border-radius: 4px;
-    padding: 32px 16px;
-    min-width: 169px;
-    border: none;
 }
 
 .button:hover,
