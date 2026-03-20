@@ -59,19 +59,16 @@ a {
 }
 
 .header .container {
+    padding: 0 15px 0 15px;
     flex-direction: row;
     padding-top: 24px;
     padding-bottom: 24px;
     width: 1158px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .footer .container {
     align-items: flex-start;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 .features-section, .team-section, .portfolio-section {
@@ -139,11 +136,6 @@ section:not(.features-section) .card {
     flex-basis: calc((100% - 2*24px) / 3);
 }
 
-/*
-.portfolio-section .card-content 
-padding: 16px 32px;
-border: 1px solid #e7e9fc;
-*/
 .card-content {
     padding: 16px 32px;
     border: 1px solid #E7E9FC;
@@ -154,6 +146,13 @@ border: 1px solid #e7e9fc;
 
 .team-section .card-content {
     align-items: center;
+    padding: 32px 0;
+}
+
+
+.portfolio-section .card-content {
+    padding: 32px 16px;
+    border-top: none;
 }
 
 .card-title, h3 {
@@ -184,7 +183,7 @@ border: 1px solid #e7e9fc;
     text-transform: uppercase;
 }
 
-header {
+.header {
     border-bottom: 1px solid #e7e9fc;
 }
 
@@ -258,7 +257,8 @@ h2 {
     text-transform: capitalize;
 }
 
-button {
+.button {
+    height: 56px;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
     background-color: #4D5AE5;
@@ -271,20 +271,20 @@ button {
     border-radius: 4px;
     padding: 32px 16px;
     min-width: 169px;
-    height: 56px;
     border: none;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
     background-color: #404BBF;
 }
 
 .footer {
     background-color: #2E2F42;
+    padding: 100px 0;
 }
 
-.footer .brand {
+.footer a.brand {
     display: inline-block;
     margin-bottom: 16px;
 }
