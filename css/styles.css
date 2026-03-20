@@ -58,21 +58,16 @@ a {
     padding-right: 156px;
     margin-left: 0;
     margin-right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .header .container {
-    padding: 0 15px;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
     width: 1158px;
     margin: 0 auto;
-}
-
-.footer .container {
-    align-items: flex-start;
 }
 
 .features-section, .team-section, .portfolio-section {
@@ -293,7 +288,6 @@ h2 {
 }
 
 .footer .footer-text {
-    display: inline-block;
     color: #F4F4FD;
     font-size: 16px;
     line-height: 1.5;
