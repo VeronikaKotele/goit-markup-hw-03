@@ -84,19 +84,6 @@ a {
     padding-bottom: 188px;
 }
 
-nav, address {
-    display: flex;
-    align-items: center; 
-    flex-direction: row;
-}
-
-nav ul, address ul {
-    gap: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 ul, ol {
     list-style-type: none;
 }
@@ -189,20 +176,19 @@ section:not(.features-section) .card {
     border-bottom: 1px solid #e7e9fc;
 }
 
-.page-nav .link {
-    color: #2E2F42;
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    text-align: center;
-    line-height: 24px;
-    letter-spacing: 0.02em;
+.page-nav, .address {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
 }
 
-.page-nav .link:hover,
-.page-nav .link:focus {
-    color: #404BBF;
+.page-nav ul, .address ul {
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 
 .nav-menu {
     display: flex;
@@ -212,6 +198,22 @@ section:not(.features-section) .card {
     gap: 40px;
     padding-top: 24px;
     padding-bottom: 24px;
+}
+
+.nav-menu .link {
+    padding: 24px 0;
+    color: #2E2F42;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.nav-menu .link:hover,
+.nav-menu .link:focus {
+    color: #404BBF;
 }
 
 .address {
@@ -284,8 +286,8 @@ h2 {
     padding: 100px 0;
 }
 
-.footer a.brand {
-    display: inline-block;
+.footer .brand {
+    display: inline-block !important;
     margin-bottom: 16px;
 }
 
